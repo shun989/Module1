@@ -31,12 +31,4 @@
 >- 1.1.8 Thành thạo cú pháp ngôn ngữ JavaScript
 >- 1.2.2 Debug được ứng dụng
 >- 3.1.2 Sử dụng Cornell Note trong ghi chép
-## Nội dung Tuần 1 (01/03/2021-05/03/2021)
->- 1.Học cách học & Kanban
->- 2.Trình bày được nội dung, yêu cầu, lịch trình và kết quả của module Bootcamp Preparation
->- 3.Trình bày được các nguyên lí của việc học
->- 4.Hiểu được cách hoạt động của não bộ liên quan đến việc học
->- 5.Áp dụng được phương pháp ghi chép Cornel
->- 6.Hiểu được các phương pháp đọc sách hiệu quả
->- 7.Áp dụng được phương pháp quản lí công việc Kanban
->- 8.Sử dụng được Ken để quản lí công việc tại CodeGym
+#####o0o#####
