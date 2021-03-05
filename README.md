@@ -1,4 +1,4 @@
-## Nội dung Tuần 1 (01/03/2021-05/03/2021)##
+## Nội dung Tuần 1 (01/03/2021-05/03/2021)
 >- 1.Học cách học & Kanban
 >- 2.Trình bày được nội dung, yêu cầu, lịch trình và kết quả của module Bootcamp Preparation
 >- 3.Trình bày được các nguyên lí của việc học
@@ -31,4 +31,5 @@
 >- 1.1.8 Thành thạo cú pháp ngôn ngữ JavaScript
 >- 1.2.2 Debug được ứng dụng
 >- 3.1.2 Sử dụng Cornell Note trong ghi chép
-#####o0o#####
+>
+    #####o0o#####
