@@ -8,6 +8,7 @@
 <style>
     td{
         font-size: 25px;
+        text-align: center;
     }
     table{
         width: 80%;
@@ -24,30 +25,30 @@
     let students = ['Họ tên', "Date of Birth", 'Điểm toán', 'Điểm lý', 'Điểm hoá','GPA'];
     let menu = [students];
 
-    //1 tạo khung danh sách.
+    //tạo khung danh sách.
 
     function showMenu() {
-       let menuTxt = '';
+       let str = '';
         for (let i = 0; i < menu.length; i++) {
 
-            menuTxt += '<tr style="color: darkblue; background-color: coral">';
-            menuTxt += '<td style="color: blue; background-color: lime" >' + menu[i][0] + '</td>';
-            menuTxt += '<td><center>' + menu[i][1] + '</center></td>';
-            menuTxt += '<td><center>' + menu[i][2] + '</center></td>';
-            menuTxt += '<td><center>' + menu[i][3] + '</center></td>';
-            menuTxt += '<td><center>' + menu[i][4] + '</center></td>';
-            menuTxt += '<td style="color: red; background-color: wheat"><center>' + menu[i][5] + '</center></td>';
-            menuTxt += '<td style="background-color: darkgray"><button onclick="updateStudent('+i+')">Edit</button> </td>';
-            menuTxt += '<td style="background-color: darkgrey"><button onclick="deleteStudent('+i+')">Delete</button> </td>';
-            menuTxt += '</tr>'
+            str += '<tr style="color: darkblue; background-color: coral">';
+            str += '<td style="color: blue; background-color: lime" >' + menu[i][0] + '</td>';
+            str += '<td>' + menu[i][1] + '</td>';
+            str += '<td>' + menu[i][2] + '</td>';
+            str += '<td>' + menu[i][3] + '</td>';
+            str += '<td>' + menu[i][4] + '</td>';
+            str += '<td style="color: red; background-color: wheat">' + menu[i][5] + '</td>';
+            str += '<td style="background-color: darkgray"><button onclick="updateStudent('+i+')">Edit</button> </td>';
+            str += '<td style="background-color: darkgrey"><button onclick="deleteStudent('+i+')">Delete</button> </td>';
+            str += '</tr>'
 
         }
 
-        document.getElementById('menu').innerHTML = menuTxt;
+        document.getElementById('menu').innerHTML = str;
     }
     showMenu();
 
-    //7 hàm thêm hoc sinh vao menu.
+    //hàm thêm hoc sinh vao menu.
     function addStudent() {
         let name = prompt('Tên học sinh');
         let date= prompt('Ngày sinh');
@@ -60,12 +61,12 @@
         console.log(menu);
         showMenu();
     }
-    //8 xoá học sinh khoi menu.
+    //xoá học sinh khoi menu.
     function deleteStudent(index) {
         menu.splice(index,1);
         showMenu();
     }
-    //9 cập nhật học sinh moi vào menu.
+    //cập nhật học sinh moi vào menu.
     function updateStudent(index) {
         menu[index][0] = prompt("Nhập tên mới", menu[index][0])
         menu[index][1] = prompt("Nhập ngày sinh mới", menu[index][1])

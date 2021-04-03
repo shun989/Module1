@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem năm thuộc thế kỉ nào</title>
+
+</head>
+<body>
+Năm<input type="number" id="nam" value="">
+<button onclick="kiemtra()" type="button" >Xem</button>
+<p id="theki"></p>
+<script>
+    function kiemtra(){
+       let year = document.getElementById('nam').value;
+       let centery = 0;
+       if(1 <= year <= 2021) {
+           centery = Math.floor(year/100) + 1;
+           console.log(centery);
+           document.getElementById('theki').innerHTML = 'Thế kỉ :' + centery;
+       }
+    }
+
+</script>
+
+</body>
+</html>

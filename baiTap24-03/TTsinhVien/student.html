@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý học sinh</title>
+    <script src="student2.js"></script>
+</head>
+<style>
+    td{
+        text-align: center;
+    }
+</style>
+<body>
+<h1 style="color: blue">Danh sách học sinh!</h1>
+<button onclick="addStudent()">Thêm học sinh</button>
+<table id="sinhvien" border="1px"></table>
+<script>
+       let student1 = new Student2('Họ tên');
+        let tuan = new Student2('Tạ Minh Tuấn');
+        let khoi = new Student2('Lộc Văn Khôi');
+        let quan = new Student2('Đoàn Hồng Quân');
+       student1.addDateOfBirth('Date of Birth');
+        tuan.addDateOfBirth('24/11/1989');
+        khoi.addDateOfBirth('1995');
+        quan.addDateOfBirth('1998');
+       student1.addScore('Điểm Toán', 'Điểm Lý', 'Điểm Hoá','Điểm trung bình');
+        tuan.addScore(6, 7, 8, );
+        khoi.addScore(5, 8, 6, );
+        quan.addScore(7, 6, 6, );
+
+        let menu = [student1, tuan, khoi, quan];
+
+        function showMenu() {
+            let str = '';
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].index = i;
+                str += menu[i].display();
+
+            }
+            document.getElementById('sinhvien').innerHTML = str;
+        }
+        showMenu();
+
+       function addStudent() {
+           let name = prompt('Tên học sinh');
+           let date= prompt('Ngày sinh');
+           let math = +prompt('Điểm toán');
+           let phy = +prompt('Điểm lý');
+           let chem = +prompt('Điểm hoá');
+           let gpa = ((math + phy + chem)/3).toFixed(2);
+           let student = [name, date, math, phy, chem, gpa];
+           menu.push([index][student]);
+           return menu;
+       }
+       showMenu();
+
+       //xoá học sinh khoi menu.
+       function deleteStudent(index){
+           menu.splice(index,1);
+           showMenu();
+       }
+       //cập nhật học sinh moi vào menu.
+       function updateStudent(index) {
+           menu[index][0] = prompt("Nhập tên mới", menu[index][0])
+           menu[index][1] = prompt("Nhập ngày sinh mới", menu[index][1])
+           menu[index][2] = +prompt("Nhập điểm toán", menu[index][2])
+           menu[index][3] = +prompt("Nhập điểm lý", menu[index][3])
+           menu[index][4] = +prompt("Nhập điểm hoá", menu[index][4])
+           menu[index][5] = (( menu[index][2] + menu[index][3] + menu[index][4])/3).toFixed(2);
+           showMenu();
+       }
+</script>
+</body>
+</html>

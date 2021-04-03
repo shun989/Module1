@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình 3 môn</title>
+    <script src="Student3.js"></script>
+</head>
+<body>
+<table id="diemtb" border="1px"></table>
+<script>
+    let khoi = new Student3('Khôi');
+    let duy = new Student3('Duy');
+    let trong = new Student3('Trọng');
+    let quan = new Student3('Quân');
+    let tuan = new Student3('Tuấn');
+    khoi.addScore(6, 5, 8);
+    duy.addScore(7, 4, 6);
+    trong.addScore(6, 8, 5);
+    quan.addScore(5, 8, 6);
+    tuan.addScore(6, 5, 7);
+
+    let students = [khoi, duy, trong, quan, tuan];
+
+    function showStudents() {
+        let str = '';
+        for (let i = 0; i < students.length; i++) {
+            str += students[i].display();
+
+        }
+        document.getElementById('diemtb').innerHTML = str;
+    }
+    showStudents();
+</script>
+</body>
+</html>
